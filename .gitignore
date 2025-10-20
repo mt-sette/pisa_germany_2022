@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Data
+data/raw/
+data/clean/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Notebook files
+notebook/
+
+# Marimo
+__marimo__/
