@@ -22,8 +22,7 @@ columns_expanded = [
     'HISEI',         # Highest parental occupational status
     'PAREDINT',      # Parental education in years
     'HOMEPOS',       # Home possessions
-    'ICTRES',        # ICT resources
-    
+    'ICTRES',        # ICT resources   
     # Demographic
     'ST004D01T',     # Gender
     
@@ -36,8 +35,27 @@ columns_expanded = [
     'BELONG',        # Sense of belonging (WLE)
     'COOPAGR',       # Cooperation (agreement) (WLE)
     'DISCLIM',       # Disciplinary climate in mathematics (WLE)
-    #'CURSUPP',       # Current parental/guardian Support (WLE)
+    'CREATSCH',      #Creative school and class environment (WLE)
+    'CREATAS',       #Creative Activities at school (WLE)
+    'BULLIED',       #Being bullied (WLE)
+
+    # "individual" variables
     'PARINVOL',      # Parental Involvement (WLE)
+    'GROSAGR',       # Growth Mindset
+    'FAMSUP'         #Family Support
+    'EMOCOAGR',      #Emotional control (agreement) (WLE)
+    'ANXMAT',        #Mathematics Anxiety (WLE)
+    'CREATFAM',      #Creative peers and family environment (WLE)
+    'MISCED',        #Mother's level of education (ISCED)
+    'FISCED',        #Father's level of education (ISCED)    
+    'ICTEFFIC',      #Self-efficacy in digital competencies (WLE)
+    'EMPATAGR',      #Empathy (agreement) (WLE)
+    'CURIOAGR',      #Curiosity (agreement) (WLE)
+    'WORKHOME',      #Working in household/take care of family members before or after school
+    'STUDYHMW',      #Studying for school or homework before or after school
+    'EXERPRAC',      #Exercise or practice a sport before or after school
+    'SKIPPING',      #Skipping classes or days of school
+    'TARDYSD',       #Arriving late for school stricter definition
     
     # PISA Performance Scores
     'PV1READ',       # Reading score
