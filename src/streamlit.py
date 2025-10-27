@@ -129,6 +129,41 @@ elif section == "Analysis":
         st.warning("Subject comparison plot not found")
     except Exception as e:
         st.warning(f"Error loading subject comparison plot: {e}")
+        
+    # Residual Analysis
+    st.subheader("Residual Analysis")
+    try:
+        st.image(
+            "src/img/residual_analysis.png",
+            caption="Residuals after Controlling for SES",
+            use_container_width=True,
+        )
+    except FileNotFoundError:
+        st.warning("Residual analysis plot not found")
+    except Exception as e:
+        st.warning(f"Error loading residual analysis plot: {e}")
+        
+    st.subheader("Residuals: Mean Residuals by Language Group")
+    residuals_summary = pd.DataFrame(
+        {
+            "mean": [10.25, -48.13],
+            "std": [94.55, 104.48],
+            "count": [4160, 886],
+        },
+        index=["German", "Other Language"],
+    )
+    st.dataframe(residuals_summary, use_container_width=True)
+
+    # Summary metrics and interpretation
+    mean_diff = 58.38
+    st.metric("Mean difference (German − Other)", f"{mean_diff:.2f} pts")
+    st.markdown("**Interpretation:** After controlling for SES, language minorities score 58.4 points lower.")
+
+    # T-test reporting
+    t_stat = 16.374
+    p_val = 0.0
+    st.markdown(f"**T-test:** t = {t_stat:.3f}, p = {p_val:.4f}")
+    st.success("*** Highly significant difference (p < 0.001) ***")
 
 elif section == "Conclusions":
     st.header("💡 Conclusions")
